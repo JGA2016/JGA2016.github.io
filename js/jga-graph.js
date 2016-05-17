@@ -16,3 +16,14 @@ for (var y = 0; y <= height; y += step) {
 	.attr("x2", width).attr("y2", y)
 	.attr("class", "link")
 }
+
+var ticks = d3.select("svg")
+
+for (var x = 0; x <= width; x += step) {
+    lines.append("node")
+	.attr("")
+
+function drawNode(d) {
+  context.moveTo(d.x + 3, d.y);
+  context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
+}
