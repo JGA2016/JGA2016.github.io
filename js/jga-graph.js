@@ -1,6 +1,6 @@
-var width = 200;
-var height = 60;
-var step = 10;
+var width = 2000;
+var height = 600;
+var step = 100;
 
 var lines = d3.select("svg")
 
