@@ -101,6 +101,7 @@
 	    .nodes(nodes)
 	    .links(links);
     force.linkDistance(width/3.05);
+    var svg = d3.select('svg')
     var link = svg.selectAll('.link')
 	.data(links)
 	.enter().append('line')
