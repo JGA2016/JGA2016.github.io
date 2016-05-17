@@ -21,9 +21,11 @@ for (var x = 0; x <= width; x += step) {
     nodes.append("circle")
 	.attr("r", 20)
 	.attr("cx", x).attr("cy", 0)
+	.attr("class", "node")
 }
 for (var y = 0; y <= height; y += step) {
     nodes.append("circle")
 	.attr("r", 20)
 	.attr("cx", 0).attr("cy", y)
+	.attr("class", "node")
 }
