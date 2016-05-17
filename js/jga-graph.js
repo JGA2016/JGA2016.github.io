@@ -17,13 +17,13 @@ for (var y = 0; y <= height; y += step) {
 	.attr("class", "link")
 }
 
-var ticks = d3.select("svg")
-
 for (var x = 0; x <= width; x += step) {
-    lines.append("node")
-	.attr("")
-
-function drawNode(d) {
-  context.moveTo(d.x + 3, d.y);
-  context.arc(d.x, d.y, 3, 0, 2 * Math.PI);
+    nodes.append("circle")
+	.attr("r", 20)
+	.attr("cx", x).attr("cy", 0)
+}
+for (var y = 0; y <= height; y += step) {
+    nodes.append("circle")
+	.attr("r", 20)
+	.attr("cx", 0).attr("cy", y)
 }
