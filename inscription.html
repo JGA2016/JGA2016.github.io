@@ -16,13 +16,13 @@ Présence :
     <input id="day2" type="checkbox" name="willattend" value="17/11/16"> 17 novembre
     <input id="day3" type="checkbox" name="willattend" value="18/11/16"> 18 novembre
 </form>
-<form id="contactform" method="POST">
+<form id="contactform" method="POST" onsubmit="return getDays()">
   <input type="text" name="name" placeholder="Nom">
   <input type="email" name="_replyto" placeholder="Adresse email">
   <input type="hidden" name="_subject" value="Inscription à JGA2016">
   <input type="text" name="_gotcha" style="display:none">
   <textarea id="days" name="body" style="display:none"></textarea>
-  <input type="submit" value="Inscription" onsubmit="return getDays()">
+  <input type="submit" value="Inscription">
 </form>
 </p>
 <script>
