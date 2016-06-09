@@ -7,14 +7,34 @@ markdown: kramdown
     Inscription
 </h3>
 
+Veuillez remplir les champs ci-dessous.
+
+Présence
+<form>
+    <input id="day1" type="checkbox" name="willattend" value="16/11/16"> 16 novembre
+    <input id="day2" type="checkbox" name="willattend" value="17/11/16"> 17 novembre
+    <input id="day3" type="checkbox" name="willattend" value="18/11/16"> 18 novembre
+</form>
 <form id="contactform" method="POST">
   <input type="text" name="name" placeholder="Nom">
   <input type="email" name="_replyto" placeholder="Adresse email">
   <input type="hidden" name="_subject" value="Inscription à JGA2016">
-  <input type="text" name="_gotcha" style="display:none" />
-  <input type="submit" value="Send">
+  <input type="text" name="_gotcha" style="display:none">
+  <input type="text" name="days" style="display:none" id="days">
+  <input type="submit" value="Inscription" onsubmit="return getDays()">
 </form>
 <script>
+    function getDays() {
+        
+        var days = document.getElementById('days');
+        days.setAttribute('value',
+            document.getElementById('day1').value() +
+            document.getElementById('day2').value() +
+            document.getElementById('day3').value() +
+            );
+
+        return true;
+    }
     var contactform =  document.getElementById('contactform');
     contactform.setAttribute('action',
         '//formspree.io/' + 'paul.beaujean' + '@' + 'dauphine' + '.' + 'eu');
