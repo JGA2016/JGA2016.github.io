@@ -31,14 +31,14 @@ Présence :
         var days = document.getElementById('days');
 
         days.setAttribute('value',
-            document.getElementById('day1').value() + ' ' +
-            document.getElementById('day2').value() + ' ' +
-            document.getElementById('day3').value()
+            document.getElementById('day1').value + ' ' +
+            document.getElementById('day2').value + ' ' +
+            document.getElementById('day3').value
             );
         alert(days.value);
         alert("what is happening");
 
-        return false;
+        return true;
     }
     var contactform =  document.getElementById('contactform');
     contactform.setAttribute('action',
