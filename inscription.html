@@ -21,14 +21,15 @@ Présence :
   <input type="email" name="_replyto" placeholder="Adresse email">
   <input type="hidden" name="_subject" value="Inscription à JGA2016">
   <input type="text" name="_gotcha" style="display:none">
-  <textarea id="days" name="body" style="display:none"></textarea>
-  <input type="submit" value="Inscription">
+  <input id="days" type="text" name="days" style="display:none">
+  <button type="submit">Inscription</button>
 </form>
 </p>
 <script>
     function getDays() {
         
         var days = document.getElementById('days');
+
         days.setAttribute('value',
             document.getElementById('day1').value() + ' ' +
             document.getElementById('day2').value() + ' ' +
