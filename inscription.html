@@ -30,11 +30,15 @@ Présence :
         
         var days = document.getElementById('days');
 
+        var day1 = document.getElementById('day1');
+        var day2 = document.getElementById('day2');
+        var day3 = document.getElementById('day3');
+
         days.setAttribute('value',
-            document.getElementById('day1').value + ' ' +
-            document.getElementById('day2').value + ' ' +
-            document.getElementById('day3').value
-            );
+            (day1.checked? day1.value : '') + " " +
+            (day2.checked? day2.value : '') + " " +
+            (day3.checked? day3.value : '')
+        );
         alert(days.value);
         alert("what is happening");
 
