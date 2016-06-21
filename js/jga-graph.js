@@ -34,6 +34,10 @@ var petersenConnectors = scale(scaling, 100, 100 + 600 + 600,
 			  [4,5],[2.2,4],
 			  [0,5],[1.8,4],
 			  [0.5,2],[1.5,2.5]]);
+var petersenNodes = scale(scaling, 100, 100 + 600 + 600,
+			  [[2,0],[3.5,2],[4,5],[0,5],[0.5,2],
+			   [2,1.5],[2.2,4],[1.5,2.5],[2.5,2.5],[1.8,4]]);
+console.log(petersenOuterCycle, petersenInnerStar, petersenConnectors)
 
 for (var i = 0; i < letterJ.length - 1; i++) {
     drawEdge(letterJ[i], letterJ[i+1]);
@@ -56,3 +60,7 @@ for (var i = 0; i < petersenInnerStar.length - 1; i++) {
 for (var i = 0; i < petersenConnectors.length - 1; i = i + 2) {
     drawEdge(petersenConnectors[i], petersenConnectors[i+1])
 }
+for (var i = 0; i < petersenNodes.length; i++) {
+    drawNode(petersenNodes[i])
+}
+
