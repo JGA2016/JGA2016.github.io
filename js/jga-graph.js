@@ -21,7 +21,7 @@ function drawEdge(source, target) {
 }
 
 var letterJ = scale(100, 100, 100, [[0,0],[2,0],[4,0],[4,1.5],[4,3],[2,4],[0,3]]);
-var letterG = scale(100, 100, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
+var letterG = scale(100, 100 + 500, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
 
 console.log(letterJ, letterG)
 
