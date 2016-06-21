@@ -1,10 +1,10 @@
-var width = 2000;
-var height = 600;
-var step = 100;
+function scale(scaling, translateX, translateY, letter) {
+    return letter.map(function(node) {
+	return [scaling * node[0] + translateX, scaling * node[1] + translateY]
+    })
+}
 
 var svg = d3.select("svg")
-
-letter_J = [[100,100],[300,100],[500,100],[500,200],[500,400],[300,500],[100,400]];
 
 function draw_node(node) {
     svg.append("circle")
@@ -20,8 +20,17 @@ function draw_edge(source, target) {
 	.attr("class", "link")
 }
 
-for (var i = 0; i < letter_J.length - 1; i++) {
-    draw_edge(letter_J[i], letter_J[i+1]);
-    draw_node(letter_J[i]);
-    draw_node(letter_J[i+1]);
+var letterJ = scale(100, 100, 100, [[0,0],[2,0],[4,0],[4,1.5],[4,3],[2,4],[0,3]]);
+var letterG = scale(100, 100, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
+
+for (var i = 0; i < letterJ.length - 1; i++) {
+    drawedge(letterJ[i], letterJ[i+1]);
+    drawnode(letterJ[i]);
+    drawnode(letterJ[i+1]);
+}
+
+for (var i = 0; i < letterG.length - 1; i++) {
+    drawedge(letterG[i], letterG[i+1]);
+    drawnode(letterG[i]);
+    drawnode(letterG[i+1]);
 }
