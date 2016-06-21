@@ -22,11 +22,11 @@ function drawEdge(source, target) {
 
 var scaling = 100;
 
-var letterJ = scale(scaling, 100, 100, [[0,0],[2,0],[4,0],[4,2],[4,4],[2,5],[0,4]]);
+var letterJ = scale(scaling, 100, 100, [[0,0],[1.5,0],[2.5,0],[4,2],[4,4],[2,5],[0,4]]);
 
-var letterG = scale(scaling, 100 + 600, 100, [[2,0],[0,2.5],[2,5],[4,3],[2,2.5]]);
+var letterG = scale(scaling, 50 + 500, 100, [[2,0],[0,2.5],[2,5],[4,3],[2,2.5]]);
 
-var petersenOuterCycle = scale(scaling, 100 + 600 + 600, 100,
+var petersenOuterCycle = scale(scaling, 50 + 500 + 500, 100,
 			       [[2,0],[3.5,2],[4,5],[0,5],[0.5,2],[2,0]]);
 var petersenInnerStar = scale(scaling, 100 + 600 + 600, 100, 
 			[[2,1.5],[2.45,4],[1.5,2.5],[2.5,2.5],[1.65,4],[2,1.5]]);
