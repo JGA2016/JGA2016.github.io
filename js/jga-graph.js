@@ -24,7 +24,7 @@ var scaling = 100;
 
 var letterJ = scale(scaling, 100, 100, [[0,0],[2,0],[4,0],[4,2],[4,4],[2,5],[0,4]]);
 
-var letterG = scale(scaling, 100 + 600, 100, [[2,0],[0,2],[2,4],[4,3],[2,2]]);
+var letterG = scale(scaling, 100 + 600, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
 
 var petersenOuterCycle = scale(scaling, 100 + 600 + 600, 100,
 			       [[2,0],[3.5,2],[4,5],[0,5],[0.5,2],[2,0]]);
