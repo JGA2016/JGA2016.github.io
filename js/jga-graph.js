@@ -6,14 +6,14 @@ function scale(scaling, translateX, translateY, letter) {
 
 var svg = d3.select("svg")
 
-function draw_node(node) {
+function drawNode(node) {
     svg.append("circle")
 	.attr("r", 20)
 	.attr("cx", node[0]).attr("cy", node[1])
 	.attr("class", "node")
 }
 
-function draw_edge(source, target) {
+function drawEdge(source, target) {
     svg.append("line")
 	.attr("x1", source[0]).attr("y1", source[1])
 	.attr("x2", target[0]).attr("y2", target[1])
@@ -26,13 +26,13 @@ var letterG = scale(100, 100, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
 console.log(letterJ, letterG)
 
 for (var i = 0; i < letterJ.length - 1; i++) {
-    drawedge(letterJ[i], letterJ[i+1]);
-    drawnode(letterJ[i]);
-    drawnode(letterJ[i+1]);
+    drawEdge(letterJ[i], letterJ[i+1]);
+    drawNode(letterJ[i]);
+    drawNode(letterJ[i+1]);
 }
 
 for (var i = 0; i < letterG.length - 1; i++) {
-    drawedge(letterG[i], letterG[i+1]);
-    drawnode(letterG[i]);
-    drawnode(letterG[i+1]);
+    drawEdge(letterG[i], letterG[i+1]);
+    drawNode(letterG[i]);
+    drawNode(letterG[i+1]);
 }
