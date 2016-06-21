@@ -1,8 +1,50 @@
 ---
 layout: default
-markdown: kramdown
+title: JGA2016 - Inscription
 ---
 
 <h3>
     Inscription
 </h3>
+
+Veuillez remplir les champs ci-dessous.
+
+<p>
+Présence :
+<form>
+    <input id="day1" type="checkbox" name="willattend" value="16/11/16"> 16 novembre
+    <input id="day2" type="checkbox" name="willattend" value="17/11/16"> 17 novembre
+    <input id="day3" type="checkbox" name="willattend" value="18/11/16"> 18 novembre
+</form>
+<form id="contactform" method="POST" onsubmit="return getDays()">
+  <input type="text" name="name" placeholder="Nom">
+  <input type="email" name="_replyto" placeholder="Adresse email">
+  <input type="hidden" name="_subject" value="Inscription à JGA2016">
+  <input type="text" name="_gotcha" style="display:none">
+  <input id="days" type="text" name="days" style="display:none">
+  <button type="submit">Inscription</button>
+</form>
+</p>
+<script>
+    function getDays() {
+        
+        var days = document.getElementById('days');
+
+        var day1 = document.getElementById('day1');
+        var day2 = document.getElementById('day2');
+        var day3 = document.getElementById('day3');
+
+        days.setAttribute('value',
+            (day1.checked? day1.value : '') + " " +
+            (day2.checked? day2.value : '') + " " +
+            (day3.checked? day3.value : '')
+        );
+        alert(days.value);
+        alert("what is happening");
+
+        return true;
+    }
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action',
+        '//formspree.io/' + 'paul.beaujean' + '@' + 'dauphine' + '.' + 'eu');
+</script>
