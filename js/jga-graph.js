@@ -4,28 +4,28 @@ var step = 100;
 
 var svg = d3.select("svg")
 
-for (var x = 0; x <= width; x += step) {
-    svg.append("line")
-	.attr("x1", x).attr("y1", 0)
-	.attr("x2", x).attr("y2", height)
-	.attr("class", "link")
+letter_J = [[1,5],[3,5],[5,5],
+			[4,5],
+			[3,5],
+	    [1,2],      [5,2],
+		  [1,3]];
+
+function draw_node(node) {
+    svg.append("circle")
+	.attr("r", 20)
+	.attr("cx", node[0]).attr("cy", node[1])
+	.attr("class", "node")
 }
-for (var y = 0; y <= height; y += step) {
+
+function draw_edge(source, target) {
     svg.append("line")
-	.attr("x1", 0).attr("y1", y)
-	.attr("x2", width).attr("y2", y)
+	.attr("x1", source[0]).attr("y1", source[1])
+	.attr("x2", target[0]).attr("y2", target[1])
 	.attr("class", "link")
 }
 
-for (var x = 0; x <= width; x += step) {
-    svg.append("circle")
-	.attr("r", 20)
-	.attr("cx", x).attr("cy", 0)
-	.attr("class", "node")
-}
-for (var y = 0; y <= height; y += step) {
-    svg.append("circle")
-	.attr("r", 20)
-	.attr("cx", 0).attr("cy", y)
-	.attr("class", "node")
+for (var i = 0; i < letter_J.length - 1; i++) {
+    draw_edge(letter_J[i], letter_J[i+1]);
+    draw_node(letter_J[i]);
+    draw_node(letter_J[i+1]);
 }
