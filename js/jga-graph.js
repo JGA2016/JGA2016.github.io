@@ -23,6 +23,8 @@ function draw_edge(source, target) {
 var letterJ = scale(100, 100, 100, [[0,0],[2,0],[4,0],[4,1.5],[4,3],[2,4],[0,3]]);
 var letterG = scale(100, 100, 100, [[2,0],[0,3],[2,5],[4,4],[2,3]]);
 
+console.log(letterJ, letterG)
+
 for (var i = 0; i < letterJ.length - 1; i++) {
     drawedge(letterJ[i], letterJ[i+1]);
     drawnode(letterJ[i]);
