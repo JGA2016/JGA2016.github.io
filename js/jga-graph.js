@@ -20,10 +20,20 @@ function drawEdge(source, target) {
 	.attr("class", "link")
 }
 
-var letterJ = scale(100, 100, 100, [[0,0],[2,0],[4,0],[4,1.5],[4,3],[2,4],[0,3]]);
-var letterG = scale(100, 100 + 600, 100, [[2,0],[0,2],[2,4],[4,3],[2,2]]);
+var scaling = 100;
 
-console.log(letterJ, letterG)
+var letterJ = scale(scaling, 100, 100, [[0,0],[2,0],[4,0],[4,1.5],[4,3],[2,4],[0,3]]);
+var letterG = scale(scaling, 100 + 600, 100, [[2,0],[0,2],[2,4],[4,3],[2,2]]);
+var petersenOuterCycle = scale(scaling, 100, 100 + 600 + 600,
+			       [[2,0],[3.5,2],[4,5],[0,5],[0.5,2],[2,0]]);
+var petersenInnerStar = scale(scaling, 100, 100 + 600 + 600, 
+			[[2,1.5],[2.2,4],[1.5,2.5],[2.5,2.5],[1.8,4],[2,1.5]]);
+var petersenConnectors = scale(scaling, 100, 100 + 600 + 600,
+			 [[2,0],[2,1.5],
+			  [3.5,2],[2.5,2.5],
+			  [4,5],[2.2,4],
+			  [0,5],[1.8,4],
+			  [0.5,2],[1.5,2.5]]);
 
 for (var i = 0; i < letterJ.length - 1; i++) {
     drawEdge(letterJ[i], letterJ[i+1]);
@@ -35,4 +45,14 @@ for (var i = 0; i < letterG.length - 1; i++) {
     drawEdge(letterG[i], letterG[i+1]);
     drawNode(letterG[i]);
     drawNode(letterG[i+1]);
+}
+
+for (var i = 0; i < petersenOuterCycle.length - 1; i++) {
+    drawEdge(petersenOuterCycle[i], petersenOuterCycle[i+1])
+}
+for (var i = 0; i < petersenInnerStar.length - 1; i++) {
+    drawEdge(petersenInnerStar[i], petersenInnerStar[i+1])
+}
+for (var i = 0; i < petersenConnectors.length - 1; i = i + 2) {
+    drawEdge(petersenConnectors[i], petersenConnectors[i+1])
 }
