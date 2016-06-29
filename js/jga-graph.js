@@ -36,7 +36,7 @@ var petersenConnectors = scale(scaling, 50 + 500 + 500, 100,
 			  [4,5],[2.45,4],
 			  [0,5],[1.65,4],
 			  [0.5,2],[1.5,2.5]]);
-var petersenNodes = scale(scaling, 100 + 600 + 600, 100,
+var petersenNodes = scale(scaling, 50 + 500 + 500, 100,
 			  [[2,0],[3.5,2],[4,5],[0,5],[0.5,2],
 			   [2,1.5],[2.45,4],[1.5,2.5],[2.5,2.5],[1.65,4]]);
 
