@@ -18,13 +18,11 @@ header {
 
 #header-logo {
     height: 300px;
-    width: 70%;
     float: left;
 }
 
 #header-info {
-    height: 300px;
-    margin-left: 70%;
+    width: 196px;
 }
 
 .node {
