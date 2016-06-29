@@ -1,8 +1,13 @@
 body {
     margin: 0;
     font-size: 1.4em;
-    font-family: 'Oregon';
+    font-family: 'Arial', 'sans-serif';
+    color: black;
+}
+
+body h1 h2 {
     color: #00428f;
+    font-family: 'Oregon';
 }
 
 header {
@@ -21,6 +26,10 @@ header {
     stroke-width: 3px;
 }
 
+nav {
+    background: #dfe2e6;
+}
+
 nav ul, footer ul {
     text-align: center;
     list-style: none;
@@ -33,7 +42,7 @@ nav ul li, footer ul li {
 }
 
 footer {
-    background: #00428f;
+    background: #dfe2e6;
 }
 
 .sponsors {
