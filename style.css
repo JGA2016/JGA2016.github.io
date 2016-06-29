@@ -36,6 +36,7 @@ p {
 
 header {
     background-color: #00428f;
+    margin: 0;
 }
 
 footer {
@@ -61,13 +62,13 @@ ul.posts li {
 }
 
 
-.node circle {
+.node {
     fill: white;
     stroke: white;
     stroke-width: 3px;
 }
 
-.link line {
+.link {
     fill: white;
     stroke: white;
     stroke-width: 3px;
