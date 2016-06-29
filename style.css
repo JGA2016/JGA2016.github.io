@@ -9,6 +9,14 @@ body h1 h2 {
     font-family: 'Oregon';
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
 header {
     background: #00428f;
     color: #00428f;
@@ -24,7 +32,7 @@ header {
 .link {
     fill: white;
     stroke: white;
-    stroke-width: 4px;
+    stroke-width: 5px;
 }
 
 nav {
