@@ -1,65 +1,13 @@
 body {
     margin: 0;
-    font-family: 'Oregon'
-}
-
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: #999;
-}
-
-a:hover {
-    color: black;
-}
-
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
+    font-size: 1.4em;
+    font-family: 'Oregon';
+    color: #00428f;
 }
 
 header {
-    background-color: #00428f;
+    background: #00428f;
 }
-
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-}
-
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
-}
-
-.header-graph {
-    width: 100%;
-    text-align: center;
-}
-.sponsors {
-    text-align: center;
-}
-
 
 .node {
     fill: white;
@@ -71,4 +19,23 @@ ul.posts li {
     fill: white;
     stroke: white;
     stroke-width: 3px;
+}
+
+nav ul, footer ul {
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li, footer ul li {
+    background: #dfe2e6;
+    display: inline;
+    margin-right: 20px;
+}
+
+footer {
+    background: #00428f;
+}
+
+.sponsors {
+    text-align: center;
 }
