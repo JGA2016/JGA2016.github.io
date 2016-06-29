@@ -8,7 +8,7 @@ var svg = d3.select("svg")
 
 function drawNode(node) {
     svg.append("circle")
-	.attr("r", 18)
+	.attr("r", 10)
 	.attr("cx", node[0]).attr("cy", node[1])
 	.attr("class", "node")
 }
