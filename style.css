@@ -1,6 +1,6 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 0;
+    font-family: 'Oregon'
 }
 
 nav ul, footer ul {
@@ -36,7 +36,6 @@ p {
 
 header {
     background-color: #00428f;
-    margin: 0;
 }
 
 footer {
