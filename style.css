@@ -37,6 +37,8 @@ header {
 
 nav {
     background: #dfe2e6;
+    color: #00428f;
+    font-family: 'Oregon';
 }
 
 nav ul, footer ul {
