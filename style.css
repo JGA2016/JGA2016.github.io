@@ -16,17 +16,15 @@ header {
     color: white;
 }
 
-#header-logo #header-info {
-    float:left;
-    min-height: 300px;
-}
-
 #header-logo {
+    height: 300px;
     width: 70%;
+    float: left;
 }
 
 #header-info {
-    width: 30%;
+    height: 300px;
+    margin-left: 70%;
 }
 
 .node {
