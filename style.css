@@ -52,6 +52,14 @@ ul.posts li {
     list-style: none;
 }
 
+.header-graph {
+    width: 100%;
+    text-align: center;
+}
+.sponsors {
+    text-align: center;
+}
+
 
 .node circle {
     fill: white;
