@@ -55,6 +55,7 @@ nav {
     background: #dfe2e6;
 }
 nav ul, footer ul {
+    margin: 0 auto;
     text-align: center;
     list-style: none;
     line-height: 3.5em;
@@ -72,7 +73,7 @@ nav ul li a {
 }
 
 .container {
-    margin: 10%;
+    margin: 5% 10%;
     font-family: 'Arial', sans-serif;
 }
 
