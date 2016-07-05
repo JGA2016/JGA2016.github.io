@@ -54,7 +54,8 @@ nav ul li, footer ul li {
 }
 
 .container {
-    font-family: 'Arial', 'sans-serif';
+    margin: 20%;
+    /* font-family: 'Arial', 'sans-serif'; */
 }
 
 .container h1 h2 {
