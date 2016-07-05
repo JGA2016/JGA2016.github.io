@@ -1,6 +1,6 @@
 function scale(scaling, translateX, translateY, letter) {
     return letter.map(function(node) {
-	return [scaling * node[0] + translateX, scaling * node[1] + translateY]
+	    return [scaling * node[0] + translateX, scaling * node[1] + translateY]
     })
 }
 
