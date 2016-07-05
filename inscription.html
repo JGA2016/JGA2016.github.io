@@ -35,11 +35,13 @@ Présence :
         var day1 = document.getElementById('day1');
         var day2 = document.getElementById('day2');
         var day3 = document.getElementById('day3');
+        var dinner = document.getElementById('dinner');
 
         days.setAttribute('value',
             (day1.checked? day1.value : '') + " " +
             (day2.checked? day2.value : '') + " " +
-            (day3.checked? day3.value : '')
+            (day3.checked? day3.value : '') + " " +
+            (dinner.checked? dinner.checker : '')
         );
 
         return true;
