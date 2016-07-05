@@ -3,9 +3,9 @@ layout: default
 title: JGA 2016 - Inscription
 ---
 
-<h3>
+<h1>
     Inscription
-</h3>
+</h1>
 
 Veuillez remplir les champs ci-dessous.
 
@@ -19,7 +19,9 @@ Présence :
     du 17 novembre
 </form>
 <form id="contactform" method="POST" onsubmit="return getDays()">
-  <input type="text" name="name" placeholder="Nom">
+  <input type="hidden" name="_position" style="display:none">
+  <input type="text" name="firstname" placeholder="Prénom">
+  <input type="text" name="lastname" placeholder="Nom">
   <input type="email" name="_replyto" placeholder="Adresse email">
   <input type="hidden" name="_subject" value="Inscription à JGA2016">
   <input type="text" name="_gotcha" style="display:none">

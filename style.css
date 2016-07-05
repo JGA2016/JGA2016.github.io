@@ -9,6 +9,14 @@
     font-style: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
 body {
     margin: 0 auto;
 }
