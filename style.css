@@ -66,7 +66,7 @@ header {
 nav {
     background: #dfe2e6;
 }
-nav ul, footer ul {
+nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -74,7 +74,7 @@ nav ul, footer ul {
     line-height: 3.5em;
 }
 
-nav ul li, footer ul li {
+nav ul li {
     padding: 0;
     font-family: 'Oregon';
     font-size: 1.2em;
@@ -99,7 +99,12 @@ nav ul li a {
     font-weight: normal;
 }
 
-.sponsors {
-    width: 90%;
+footer ul {
+    padding: 10px;
+    list-style: none;
     text-align: center;
+}
+
+footer ul li {
+    display: inline;
 }
