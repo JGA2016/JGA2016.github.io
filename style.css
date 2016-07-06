@@ -34,7 +34,7 @@ h1 h2 h3 {
 header {
     background: #00428f;
     color: white;
-    height: 200px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: space-around;
