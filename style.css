@@ -79,6 +79,8 @@ nav ul li a {
 }
 
 .container {
+    height: 100%;
+    width: 80%;
     margin: 5% 10%;
     font-family: 'Arial', sans-serif;
 }
