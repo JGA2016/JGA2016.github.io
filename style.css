@@ -70,7 +70,7 @@ nav ul li, footer ul li {
     font-size: 1.2em;
     display: inline;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: -40px;
 }
 
 nav ul li a {
