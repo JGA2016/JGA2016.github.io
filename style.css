@@ -54,6 +54,7 @@ header {
 }
 
 #deadlines {
+    margin-left: 15px;
     font-family: Arial, sans-serif;
     font-weight: normal;
     font-size: 0.5em;
