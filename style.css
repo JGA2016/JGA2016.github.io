@@ -9,10 +9,6 @@
     font-style: normal;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
 a {
     text-decoration: none;
@@ -65,12 +61,14 @@ nav {
 }
 nav ul, footer ul {
     margin: 0;
+    padding: 0;
     text-align: center;
     list-style: none;
     line-height: 3.5em;
 }
 
 nav ul li, footer ul li {
+    padding: 0;
     font-family: 'Oregon';
     font-size: 1.2em;
     display: inline;
