@@ -44,6 +44,13 @@ header {
     width: 60%;
 }
 
+#logo-link {
+    color:white;
+    font-family:Oregon;
+    font-size:1.4em;
+    text-align: center;
+}
+
 .node {
     fill: white;
     stroke: white;
@@ -93,5 +100,6 @@ nav ul li a {
 }
 
 .sponsors {
+    width: 90%;
     text-align: center;
 }
