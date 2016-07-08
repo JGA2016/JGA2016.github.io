@@ -109,6 +109,31 @@ nav ul li a {
     font-weight: normal;
 }
 
+input[type=text] {
+    width: 100px;
+}
+
+input[type=email] {
+    width: 150px;
+}
+
+table, th, tr {
+    border-spacing: 10px;
+}
+
+th {
+    font-weight: normal;
+    text-align: center;
+}
+
+td {
+    text-align: right;
+}
+
+footer {
+    text-align: center;
+}
+
 footer ul {
     padding: 10px;
     list-style: none;

@@ -4,20 +4,19 @@ title: JGA 2016 - Inscription
 ---
 
 <h1>
-    Inscription
+    Inscription & Soumission de Résumé
 </h1>
 
-Veuillez remplir les champs ci-dessous.
+<h2> Inscription à la conférence </h2>
 
 <p>
-Présence :
-<form>
-    <input id="day1" type="checkbox" name="willattend" value="16/11/16"> 16 novembre
-    <input id="day2" type="checkbox" name="willattend" value="17/11/16"> 17 novembre
-    <input id="day3" type="checkbox" name="willattend" value="18/11/16"> 18 novembre
-    <input id="dinner" type="checkbox" name="willattend" value="dinner"> dîner
-    du 17 novembre
-</form>
+L'inscription à la conférence est gratuite mais obligatoire. Veuillez
+renseigner votre emploi du temps durant la conférence pour contribuer au bon
+dimensionnement des salles.
+</p>
+
+<h3> Formulaire </h3>
+<p>
 <form id="contactform" method="POST" onsubmit="return getDays()">
   <input type="text" name="firstname" placeholder="Prénom">
   <input type="text" name="lastname" placeholder="Nom">
@@ -26,25 +25,70 @@ Présence :
   <input type="hidden" name="_subject" value="Inscription à JGA2016">
   <input type="hidden" name="_next" value="//jga2016.github.io/merci.html">
   <input type="text" name="_gotcha" style="display:none">
-  <input id="days" type="text" name="days" style="display:none">
+  <input type="text" id="conference" name="conference" style="display:none">
+  <input type="text" id="lunch" name="lunch" style="display:none">
+  <input type="text" id="dinner" name="dinner" style="display:none">
+  <table>
+      <tr>
+      <th> Date </th>
+      <th> Conférence </th>
+      <th> Déjeuner </th>
+      <th> Dîner </th>
+      </tr>
+      <tr>
+        <td> mer. 16 nov. </td>
+        <td> <input type="checkbox" id="conf16" value="16/11/16"> </td>
+        <td> <input type="checkbox" id="lunch16" value="16/11/16"> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> jeu. 17 nov. </td>
+        <td> <input type="checkbox" id="conf17" value="17/11/16"> </td>
+        <td> <input type="checkbox" id="lunch17" value="17/11/16"> </td>
+        <td> <input type="checkbox" id="dinner17" value="17/11/16"> </td>
+      </tr>
+      <tr>
+        <td> ven. 18 nov. </td>
+        <td> <input type="checkbox" id="conf18" value="18/11/16"> </td>
+        <td> <input type="checkbox" id="lunch18" value="18/11/16"> </td>
+        <td> </td>
+      </tr>
+  </table>
+  <br>
   <button type="submit">Inscription</button>
 </form>
 </p>
 <script>
     function getDays() {
         
-        var days = document.getElementById('days');
-
-        var day1 = document.getElementById('day1');
-        var day2 = document.getElementById('day2');
-        var day3 = document.getElementById('day3');
+        var conference = document.getElementById('conference');
+        var lunch = document.getElementById('lunch');
         var dinner = document.getElementById('dinner');
 
-        days.setAttribute('value',
-            (day1.checked? day1.value : '') + " " +
-            (day2.checked? day2.value : '') + " " +
-            (day3.checked? day3.value : '') + " " +
-            (dinner.checked? dinner.value : '')
+        var conf16 = document.getElementById('conf16');
+        var conf17 = document.getElementById('conf17');
+        var conf18 = document.getElementById('conf18');
+        
+        var lunch16 = document.getElementById('lunch16');
+        var lunch17 = document.getElementById('lunch17');
+        var lunch18 = document.getElementById('lunch18');
+        
+        var dinner17 = document.getElementById('dinner17');
+
+        conference.setAttribute('value',
+            (conf16.checked? conf16.value : '') + " " +
+            (conf17.checked? conf17.value : '') + " " +
+            (conf18.checked? conf18.value : '')
+        );
+
+        lunch.setAttribute('value',
+            (lunch16.checked? lunch16.value : '') + " " +
+            (lunch17.checked? lunch17.value : '') + " " +
+            (lunch18.checked? lunch18.value : '')
+        );
+
+        dinner.setAttribute('value',
+            (dinner17.checked? dinner17.value : '')
         );
 
         return true;
@@ -52,4 +96,14 @@ Présence :
     var contactform =  document.getElementById('contactform');
     contactform.setAttribute('action',
         '//formspree.io/' + 'paul.beaujean' + '@' + 'dauphine' + '.' + 'eu');
+</script>
+
+<h2> Soumission </h2>
+
+Veuillez envoyer votre résumé d'exactement une page au format .tex à
+<a id="contactinfo" href="mailto:gotcha@gotcha.com">cette adresse</a>.
+<script>
+    var contact = document.getElementById('contactinfo')
+    contact.setAttribute('href',
+            'mailto:' + 'jga2016' + '@' + 'lamsade' + '.' + 'fr');
 </script>
