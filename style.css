@@ -117,7 +117,7 @@ input[type=email] {
     width: 150px;
 }
 
-table, th, tr {
+#schedule-form {
     border-spacing: 10px;
 }
 

@@ -28,7 +28,7 @@ dimensionnement des salles.
   <input type="text" id="conference" name="conference" style="display:none">
   <input type="text" id="lunch" name="lunch" style="display:none">
   <input type="text" id="dinner" name="dinner" style="display:none">
-  <table>
+  <table id="schedule-form">
       <tr>
       <th> Date </th>
       <th> Conférence </th>
@@ -80,7 +80,7 @@ dimensionnement des salles.
              (conf17.checked? conf17.value : ''),
              (conf18.checked? conf18.value : '')]
             .filter(function(x) { return x; })
-            .join()
+            .join(" ")
         );
 
         lunch.setAttribute('value',
@@ -88,7 +88,7 @@ dimensionnement des salles.
              (lunch17.checked? lunch17.value : ''),
              (lunch18.checked? lunch18.value : '')]
             .filter(function(x) { return x; })
-            .join()
+            .join(" ")
         );
 
         dinner.setAttribute('value',
