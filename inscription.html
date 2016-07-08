@@ -76,15 +76,19 @@ dimensionnement des salles.
         var dinner17 = document.getElementById('dinner17');
 
         conference.setAttribute('value',
-            (conf16.checked? conf16.value : '') + " " +
-            (conf17.checked? conf17.value : '') + " " +
-            (conf18.checked? conf18.value : '')
+            [(conf16.checked? conf16.value : ''),
+             (conf17.checked? conf17.value : ''),
+             (conf18.checked? conf18.value : '')]
+            .filter(function(x) { return x; })
+            .join()
         );
 
         lunch.setAttribute('value',
-            (lunch16.checked? lunch16.value : '') + " " +
-            (lunch17.checked? lunch17.value : '') + " " +
-            (lunch18.checked? lunch18.value : '')
+            [(lunch16.checked? lunch16.value : ''),
+             (lunch17.checked? lunch17.value : ''),
+             (lunch18.checked? lunch18.value : '')]
+            .filter(function(x) { return x; })
+            .join()
         );
 
         dinner.setAttribute('value',
