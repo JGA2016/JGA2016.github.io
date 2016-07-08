@@ -110,10 +110,12 @@ nav ul li a {
 }
 
 input[type=text] {
+    font-family: Arial, sans-serif;
     width: 100px;
 }
 
 input[type=email] {
+    font-family: Arial, sans-serif;
     width: 150px;
 }
 
