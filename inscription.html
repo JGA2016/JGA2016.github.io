@@ -8,118 +8,24 @@ title: JGA 2016 - Inscription
 </h1>
 
 <h2> Inscription </h2>
+
 <p>
-Le formulaire d'inscription sera fermé le soir du lundi 17 octobre.
+L'inscription à la conférence est désormais terminée.
 </p>
-<p>
-L'inscription à la conférence est gratuite mais obligatoire.
-<br>
-Veuillez indiquer votre présence aux événements de la conférence pour
-contribuer au bon dimensionnement des salles.
-</p>
-
-<h3> Formulaire </h3>
-<p>
-<form id="contactform" method="POST" onsubmit="return getDays()">
-  <input type="text" name="firstname" placeholder="Prénom">
-  <input type="text" name="lastname" placeholder="Nom">
-  <input type="text" name="affiliation" placeholder="Université">
-  <input type="email" name="_replyto" placeholder="Adresse email">
-  <input type="hidden" name="_subject" value="Inscription à JGA2016">
-  <input type="hidden" name="_next" value="//jga2016.github.io/merci.html">
-  <input type="text" name="_gotcha" style="display:none">
-  <input type="text" id="conference" name="conference" style="display:none">
-  <input type="text" id="lunch" name="lunch" style="display:none">
-  <input type="text" id="dinner" name="dinner" style="display:none">
-  <table id="schedule-form">
-      <tr>
-      <th> Date </th>
-      <th> Conférence </th>
-      <th> Déjeuner </th>
-      <th> Dîner </th>
-      </tr>
-      <tr>
-        <td> mer. 16 nov. </td>
-        <td> <input type="checkbox" id="conf16" value="16/11/16"> </td>
-        <td> <input type="checkbox" id="lunch16" value="16/11/16"> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> jeu. 17 nov. </td>
-        <td> <input type="checkbox" id="conf17" value="17/11/16"> </td>
-        <td> <input type="checkbox" id="lunch17" value="17/11/16"> </td>
-        <td> <input type="checkbox" id="dinner17" value="17/11/16"> </td>
-      </tr>
-      <tr>
-        <td> ven. 18 nov. </td>
-        <td> <input type="checkbox" id="conf18" value="18/11/16"> </td>
-        <td> <input type="checkbox" id="lunch18" value="18/11/16"> </td>
-        <td> </td>
-      </tr>
-  </table>
-  <br>
-  <button type="submit">Inscription</button>
-</form>
-</p>
-<script>
-    function getDays() {
-        
-        var conference = document.getElementById('conference');
-        var lunch = document.getElementById('lunch');
-        var dinner = document.getElementById('dinner');
-
-        var conf16 = document.getElementById('conf16');
-        var conf17 = document.getElementById('conf17');
-        var conf18 = document.getElementById('conf18');
-        
-        var lunch16 = document.getElementById('lunch16');
-        var lunch17 = document.getElementById('lunch17');
-        var lunch18 = document.getElementById('lunch18');
-        
-        var dinner17 = document.getElementById('dinner17');
-
-        conference.setAttribute('value',
-            [(conf16.checked? conf16.value : ''),
-             (conf17.checked? conf17.value : ''),
-             (conf18.checked? conf18.value : '')]
-            .filter(function(x) { return x; })
-            .join(" ")
-        );
-
-        lunch.setAttribute('value',
-            [(lunch16.checked? lunch16.value : ''),
-             (lunch17.checked? lunch17.value : ''),
-             (lunch18.checked? lunch18.value : '')]
-            .filter(function(x) { return x; })
-            .join(" ")
-        );
-
-        dinner.setAttribute('value',
-            (dinner17.checked? dinner17.value : '')
-        );
-
-        return true;
-    }
-    var contactform =  document.getElementById('contactform');
-    contactform.setAttribute('action',
-        '//formspree.io/' + 'paul' + '.' + 'beaujean' + '1990' + '@' + 'gmail' + '.' + 'com');
-</script>
 
 <h2> Soumission </h2>
 
 <p>
-Veuillez envoyer à l'adresse 
-<a id="contactinfo" href="mailto:gotcha@gotcha.com">gotcha@gotcha.com</a>
-votre résumé. Le résumé doit être au format .tex et ne pas dépasser une page.
+La soumission des résumés est achevée. Vous trouverez les informations sur les présentations sur la page du programme.
+<br>
+
+<p>
+Pour toute demande concernant une inscription ou une soumission de résumé,
+veuillez contacter le comité de programme à l'adresse <a id="contactinfo" href="mailto:gotcha@gotcha.com">gotcha@gotcha.com</a>. 
 <script>
     var contact = document.getElementById('contactinfo')
     contact.innerHTML = 'jga2016' + '@' + 'lamsade' + '.' + 'dauphine' + '.' + 'fr';
     contact.setAttribute('href',
-    'mailto:' + 'paul' + '.' + 'beaujean' + '1990' + '@' + 'gmail' + '.' + 'com');
+    'mailto:' + 'jga2016' + '@' + 'lamsade' + '.' + 'dauphine' + '.' + 'fr');
 </script>
-</p>
-
-<p>
-Vous pouvez trouver un modèle de résumé <a href="tex/modele.tex">ici</a>
-(version compilée <a href="tex/modele.pdf">ici</a>).
 </p>
