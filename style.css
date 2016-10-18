@@ -123,6 +123,45 @@ input[type=email] {
     border-spacing: 10px;
 }
 
+#program {
+    table-layout: fixed;
+}
+
+#program tr:hover {
+    color: #00428f;
+    background: #dfe2e6;
+}
+
+#program, #program td {
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+
+.networking {
+    border: 1px solid black;
+    border-style: solid hidden solid;
+}
+
+#program td {
+    text-align: left;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
+#program td:nth-child(even) {
+    font-weight: bold;
+}
+
+#program tr td:nth-child(1) {
+    text-align: right;
+    width: 8em;
+}
+
+#program tr td:nth-child(2) {
+    text-align: center;
+    min-width: 14em;
+}
+
 th {
     font-weight: normal;
     text-align: center;
@@ -130,6 +169,7 @@ th {
 
 td {
     text-align: right;
+    word-wrap: break-word;
 }
 
 footer {
